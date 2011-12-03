@@ -47,12 +47,12 @@ class StationAdapter extends ArrayAdapter<Station> {
 			if (station_title != null) {
 				station_title.setText(o.getStationName());
 			}
-
-			TextView station_description = (TextView) v
-					.findViewById(R.id.station_description);
-			if (station_description != null) {
-				station_description.setText(o.getStationDescription());
-			}
+//  Description field
+//			TextView station_description = (TextView) v
+//					.findViewById(R.id.station_description);
+//			if (station_description != null) {
+//				station_description.setText(o.getStationDescription());
+//			}
 
 			TextView bikes_available_num = (TextView) v
 					.findViewById(R.id.bikes_available_num);
@@ -84,7 +84,7 @@ class StationAdapter extends ArrayAdapter<Station> {
 				}
 			}
 
-			LinearLayout distance_and_active_row = (LinearLayout) v.findViewById(R.id.distance_and_active_row);
+			//LinearLayout distance_and_active_row = (LinearLayout) v.findViewById(R.id.distance_and_active_row);
 			TextView distance = (TextView) v.findViewById(R.id.distance);
 			TextView distance_num = (TextView) v.findViewById(R.id.distance_num);
 			TextView distance_km = (TextView) v.findViewById(R.id.distance_km);
@@ -115,22 +115,23 @@ class StationAdapter extends ArrayAdapter<Station> {
 				}
 			}
 
-			TextView active_view = (TextView) v
-					.findViewById(R.id.active);
-			boolean active_val = o.isActive();
-			if (active_view != null) {
-				if(active_val) {
-					active_view.setVisibility(View.INVISIBLE);
-				} else {
-					active_view.setVisibility(View.VISIBLE);
-				}			
-			}
+    // Active station flag display
+	//		TextView active_view = (TextView) v
+	//				.findViewById(R.id.active);
+	//		boolean active_val = o.isActive();
+	//		if (active_view != null) {
+	//			if(active_val) {
+	//				active_view.setVisibility(View.INVISIBLE);
+	//			} else {
+	//				active_view.setVisibility(View.VISIBLE);
+	//			}
+	//		}
 			
-			if(active_val && (loc == null)) {
-				distance_and_active_row.setVisibility(View.GONE);
-			} else {
-				distance_and_active_row.setVisibility(View.VISIBLE);
-			}
+	//		if(active_val && (loc == null)) {
+				//distance_and_active_row.setVisibility(View.GONE);
+	//		} else {
+				//distance_and_active_row.setVisibility(View.VISIBLE);
+	//		}
 
 		}
 		return v;

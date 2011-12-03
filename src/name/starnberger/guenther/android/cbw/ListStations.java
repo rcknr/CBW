@@ -19,7 +19,6 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
-import name.starnberger.guenther.android.cbw.R;
 
 import android.app.ListActivity;
 import android.app.ProgressDialog;
